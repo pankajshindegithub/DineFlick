@@ -1,0 +1,263 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: white;
+    border-bottom: 1px solid rgba(7, 7, 7, 0.114);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: orange;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+.nav-links li a:hover{
+    color: orange;
+}
+
+
+/* Auth Buttons */
+.auth-buttons a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.btn-login {
+    color: black;
+}
+
+.btn-signup {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin: 10px 15px;
+}
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+.content {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 15px;
+    color: gray;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.start-booking {
+    background: orange;
+    color: white;
+    margin-right: 15px;
+}
+
+.contact-us {
+    background: black;
+    color: white;
+}
+
+/* Image Section */
+.image-placeholder img {
+    width: 450px;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .image-placeholder img {
+        width: 100%;
+    }
+}
+
+
+/* Our Values Section */
+.values-section {
+    text-align: center;
+    padding: 60px 50px;
+    background-color: #f8f9fa;
+}
+
+.values-section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.value-item {
+    width: 22%;
+    text-align: center;
+}
+
+.value-item img {
+    width: 40px;
+    height: 40px;
+    background-color: #ffe5c4;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.value-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #111827;
+    color: #ffffff;
+    padding: 50px 10%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Footer Logo */
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Footer Sections */
+.footer h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer ul li a:hover {
+    color: #ff6600;
+}
+
+/* Contact Section */
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Social Icons */
+.footer-social img {
+    width: 25px;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    font-size: 14px;
+}

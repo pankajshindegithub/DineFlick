@@ -1,0 +1,629 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffff;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 4%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+   
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: orange;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links :hover {
+    color: orange;
+}
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    padding: 10px 15px;
+    
+}
+
+/* Right Section (Search Bar & Auth Buttons) */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* Fixed Login & Sign Up Buttons */
+.btn-login {
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.btn-signup {
+   background-image: linear-gradient(45deg, #df4881, #c403d7);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    border-top-right-radius: 0;
+}
+
+
+/* Add these styles to your CSS file */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 250px 40px;
+    color: white;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Slider Container */
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Background Image Slides */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active Slide */
+.hero-bg.active {
+    opacity: 1;
+}
+
+/* Add a dark overlay to make text more readable */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: -1;
+}/* Increase the text size */
+.hero h1 {
+    font-size: 64px;  /* Larger text */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;  /* Bigger subtitle */
+    margin-bottom: 40px;  /* More spacing before buttons */
+}
+
+/* Adjust button position */
+.buttons {
+    margin-top: 30px; /* Moves buttons slightly downward */
+}
+
+/* CTA Buttons */
+.btn-orange, .btn-black {
+    padding: 14px 24px; /* Bigger buttons */
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.btn-orange {
+    background: orange;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.btn-black {
+    background: black;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* Right Section */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+/* Hamburger (☰) on Right Side */
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0; /* Aligns to the right */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btn-logout {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #e74c3c; /* Red color for logout */
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show Hamburger on Small Screens */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.services h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 500px;  /* Increased size */
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Fix for background color when using custom icons */
+.service-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;   /* Adjust icon size */
+    height: 60px;
+    border-radius: 50%;
+    background: none; /* Remove background color */
+}
+
+.service-icon img {
+    width: 80%;   /* Ensure custom icons fit properly */
+    height: auto;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 550;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.service-link {
+    color: orange;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+.how-it-works {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background to match the prototype */
+}
+
+.how-it-works h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.step {
+    width: 280px;
+    text-align: center;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.step h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Featured-listings */
+.featured-listings {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.featured-listings h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.listing-category h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 25px;
+    margin-left: 110px;
+}
+
+.listings-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.listing-card {
+    width: 280px;
+    height: 350px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listing-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images are properly resized regardless of size */
+}
+
+.listing-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    height: 190px; /* Fixed height for info section */
+}
+
+.listing-info h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.listing-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.book-now {
+    background: black;
+    color: white;
+    border: none;
+    padding: 3px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    text-decoration: none;
+}
+
+.book-now:hover {
+    background: #333;
+}
+
+/* Upcoming events */
+.upcoming-events {
+    text-align: left;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    margin-top: -50px;
+}
+
+.upcoming-events h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 110px;
+}
+
+.events-container {
+    display: flex;
+    justify-content: center; /* Aligns items in the center */
+    flex-wrap: wrap;
+    gap: 30px; /* Space between cards */
+}
+
+/* Event Card */
+.event-card {
+    width: 280px;
+    height: 380px; /* Fixed height to fit content */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 10px; /* Reduces extra spacing */
+}
+
+/* Larger Image */
+.event-image {
+    width: 100%;
+    height: 175px; /* Fixed height */
+    background: #f0f0f0;
+    overflow: hidden; /* Ensures images don't overflow */
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintains aspect ratio and fills container */
+}
+
+/* Make event info section expand evenly */
+.event-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows content to take equal space */
+    position: relative; /* For absolute positioning of the button */
+    height: 205px; /* Fixed height to ensure consistent layout */
+}
+
+/* Move "Buy Tickets" button to the bottom */
+.buy-tickets {
+    background: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 45px;
+    transition: background 0.3s ease-in-out;
+    position: absolute; /* Positions button at the bottom */
+    bottom: 15px; /* Distance from bottom */
+    right: 15px; /* Distance from right */
+    text-decoration: none;
+}
+
+.buy-tickets:hover {
+    background: #333;
+}
+
+/* Text Elements */
+.event-info h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.event-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.event-price {
+    font-size: 16px;
+    color: #ff6600;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+
+ .footer {
+        background-color: #111827;
+        color: #ffffff;
+        padding: 50px 10%;
+        font-family: Arial, sans-serif;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    /* Footer Logo */
+    .footer-logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    
+    /* Footer Sections */
+    .footer h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .footer ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer ul li {
+        margin-bottom: 8px;
+    }
+    
+    .footer ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    .footer ul li a:hover {
+        color: #ff6600;
+    }
+    
+    .footer-contact p {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .footer-social img {
+        width: 25px;
+        margin-right: 10px;
+        transition: opacity 0.3s;
+    }
+    
+    .footer-social img:hover {
+        opacity: 0.7;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 15px;
+        font-size: 14px;
+    }
